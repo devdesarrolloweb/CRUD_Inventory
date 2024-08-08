@@ -5,6 +5,7 @@ import './ProductList.css'; // Importa el archivo CSS para estilos personalizado
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importa Bootstrap CSS
 import { Modal, Button } from 'react-bootstrap'; // Importa componentes de Bootstrap
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Importa FontAwesome CSS
+import { API_URL } from '../config';
 
 const ProductList = () => {
     const [products, setProducts] = useState([]);
@@ -20,7 +21,7 @@ const ProductList = () => {
 
     // Función para obtener todos los productos
     const fetchAllProducts = (searchName) => {
-        axios.get(`http://localhost:8000/v1/products.php?name=${searchName}`)
+        axios.get(`${API_URL}/products.php?name=${searchName}`)
             .then(response => {
                 const fetchedProducts = response.data;
                 if (Array.isArray(fetchedProducts)) {
@@ -80,7 +81,7 @@ const ProductList = () => {
     };
 
     const handleDelete = (productId) => {
-        axios.delete(`http://localhost:8000/v1/products.php?id=${productId}`)
+        axios.delete(`${API_URL}/products.php?id=${productId}`)
             .then(() => {
                 setShowModal(false); // Oculta el modal después de eliminar
                 fetchAllProducts(searchName); // Refrescar la lista de productos

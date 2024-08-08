@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'; // 
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Importa FontAwesome CSS
 import './CreateProduct.css'; // Importa el archivo CSS con la clase personalizada
+import { API_URL } from '../config';
 
 const CreateProduct = () => {
     const [name, setName] = useState('');
@@ -16,7 +17,7 @@ const CreateProduct = () => {
 
     useEffect(() => {
         // Obtener la lista de proveedores
-        axios.get('http://localhost:8000/v1/providers.php')
+        axios.get(`${API_URL}/v1/providers.php`)
             .then(response => {
                 setProviders(response.data); // 
             })
@@ -35,7 +36,7 @@ const CreateProduct = () => {
             provider_id: providerId
         };
 
-        axios.post('http://localhost:8000/v1/products.php', newProduct)
+        axios.post(`${API_URL}/v1/products.php`, newProduct)
             .then(() => {
                 navigate('/'); // Redirige al usuario a la página principal
             })
