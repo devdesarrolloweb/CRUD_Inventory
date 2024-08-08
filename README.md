@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # CRUD_Inventory
 =======
 # CRUD Inventory API and Frontend
@@ -84,4 +83,4 @@ The frontend application is built using either React.js provides a user interfac
      cd my-product-app   and run:  npm start
      cd api/v1 and run: php -S localhost:8000
 
->>>>>>> 35be98d (initial commit)
+
