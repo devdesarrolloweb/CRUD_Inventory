@@ -4,6 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Importa FontAwesome CSS
 import './EditProduct.css'; // Importa el archivo CSS con la clase personalizada
+import { API_URL } from '../config';
 
 const EditProduct = () => {
     const { id } = useParams();
@@ -18,7 +19,7 @@ const EditProduct = () => {
 
     useEffect(() => {
         // Obtener la lista de proveedores
-        axios.get('http://localhost:8000/v1/providers.php')
+        axios.get(`${API_URL}/providers.php`)
             .then(response => {
                 setProviders(response.data); // 
             })
@@ -29,7 +30,7 @@ const EditProduct = () => {
     }, []);
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/v1/products.php?id=${id}`)
+        axios.get(`${API_URL}/products.php?id=${id}`)
             .then(response => {
                 const data = response.data;
                 if (data && data.id) {
@@ -56,7 +57,7 @@ const EditProduct = () => {
             description,
             provider_id: providerId // Incluye el ID del proveedor
         };
-        axios.put(`http://localhost:8000/v1/products.php?id=${id}`, updatedProduct)
+        axios.put(`${API_URL}/products.php?id=${id}`, updatedProduct)
             .then(() => {
                 navigate('/');
             })

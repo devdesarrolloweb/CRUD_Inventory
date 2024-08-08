@@ -4,6 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'; // 
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Importa FontAwesome CSS
 import './ProviderList.css'; // Importa el archivo CSS con la clase personalizada
+import { API_URL } from '../config';
 
 const EditProvider = () => {
     const { id } = useParams();
@@ -16,7 +17,7 @@ const EditProvider = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/v1/providers.php?id=${id}`)
+        axios.get(`${API_URL}/providers.php?id=${id}`)
             .then(response => {
                 const data = response.data;
                 if (data && data.id) {
@@ -37,7 +38,7 @@ const EditProvider = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.put(`http://localhost:8000/v1/providers.php?id=${id}`, { name, address, phone, description })
+        axios.put(`${API_URL}/providers.php?id=${id}`, { name, address, phone, description })
             .then(() => {
                 navigate('/list-provider'); // Redirige a la lista de proveedores después de la actualización
             })

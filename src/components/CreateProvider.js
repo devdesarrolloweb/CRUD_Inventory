@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Importa FontAwesome CSS
 import './CreateProvider.css'; // Importa el archivo CSS con la clase personalizada
+import { API_URL } from '../config';
 
 const CreateProvider = () => {
     const [name, setName] = useState('');
@@ -22,7 +23,7 @@ const CreateProvider = () => {
             description
         };
 
-        axios.post('http://localhost:8000/v1/providers.php', newProvider)
+        axios.post(`${API_URL}/providers.php`, newProvider)
             .then(() => {
                 navigate('/list-provider'); // Redirige al usuario a la página /list-provider
             })

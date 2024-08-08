@@ -17,7 +17,7 @@ const CreateProduct = () => {
 
     useEffect(() => {
         // Obtener la lista de proveedores
-        axios.get(`${API_URL}/v1/providers.php`)
+        axios.get(`${API_URL}/providers.php`)
             .then(response => {
                 setProviders(response.data); // 
             })
@@ -36,7 +36,7 @@ const CreateProduct = () => {
             provider_id: providerId
         };
 
-        axios.post(`${API_URL}/v1/products.php`, newProduct)
+        axios.post(`${API_URL}/products.php`, newProduct)
             .then(() => {
                 navigate('/'); // Redirige al usuario a la página principal
             })

@@ -5,6 +5,7 @@ import './ProviderList.css'; // Asegúrate de importar el archivo CSS para los e
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importa Bootstrap CSS
 import { Modal, Button } from 'react-bootstrap'; // Importa componentes de Bootstrap
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Importa FontAwesome CSS
+import { API_URL } from '../config';
 
 const ProviderList = () => {
     const [providers, setProviders] = useState([]);
@@ -19,7 +20,7 @@ const ProviderList = () => {
 
     // Función para obtener todos los proveedores
     const fetchProviders = () => {
-        axios.get('http://localhost:8000/v1/providers.php')
+        axios.get(`${API_URL}/providers.php`)
             .then(response => {
                 const fetchedProviders = response.data;
                 if (Array.isArray(fetchedProviders)) {
@@ -69,7 +70,7 @@ const ProviderList = () => {
     }, [currentPage, providers]);
 
     const handleDelete = (providerId) => {
-        axios.delete(`http://localhost:8000/v1/providers.php?id=${providerId}`)
+        axios.delete(`${API_URL}/providers.php?id=${providerId}`)
             .then(() => {
                 setShowModal(false); // Oculta el modal después de eliminar
                 fetchProviders(); // Refrescar la lista de proveedores
