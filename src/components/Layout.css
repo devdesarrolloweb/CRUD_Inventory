@@ -1,0 +1,13 @@
+/* src/components/Layout.css */
+.layout {
+    background-color: #000; /* Fondo negro */
+    color: #fff;            /* Texto blanco */
+    min-height: 100vh;      /* Asegúrate de que el fondo negro cubra toda la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content {
+    flex: 1; /* Hace que el contenido ocupe todo el espacio disponible, empujando el pie de página hacia el fondo */
+  }
+  

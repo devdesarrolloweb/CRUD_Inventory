@@ -1,0 +1,10 @@
+/* src/components/Footer.css */
+.footer-custom {
+    background-color: #6c757d; /* Color gris */
+    color: white; /* Color blanco para el texto */
+  }
+  
+ 
+  .footer-custom p {
+    padding-top: 20px; /* Ajusta el valor según tus necesidades */
+  }

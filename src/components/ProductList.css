@@ -1,0 +1,64 @@
+/* src/components/ProductList.css */
+.product-list-container {
+    background-color: #f0f0f0; /* Fondo gris claro */
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .bg-light-gray {
+    background-color: #f0f0f0; /* Fondo gris claro */
+  }
+  
+  .card.bg-blue {
+    background-color: #226dbd; /* Azul de Bootstrap */
+    color: #ffffff; /* Texto blanco */
+  }
+  
+  .card .btn-light {
+    color: #007bff; /* Botón de color azul */
+    border-color: #007bff; /* Borde del botón azul */
+  }
+  
+  .card .btn-light:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el ratón sobre el botón */
+  }
+  
+  /* ProductList.css */
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.product-list-container {
+  padding: 20px;
+}
+
+.bg-blue {
+  background-color: #007bff; /* Cambia esto al color que prefieras */
+}
+
+.text-white {
+  color: #fff;
+}
+
+.bg-light-gray {
+  background-color: #f8f9fa; /* Cambia esto al color que prefieras */
+}

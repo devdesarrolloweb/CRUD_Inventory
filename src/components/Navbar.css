@@ -1,0 +1,146 @@
+/* src/components/Navbar.css */
+.navbar-custom {
+  background-color: #6c757d !important; /* Color gris */
+  padding-left: 130px; /* Ajusta este valor según lo necesites */
+  padding-right: 130px; /* Ajusta este valor según lo necesites */
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar-left {
+  display: flex;
+}
+
+.navbar-right {
+  display: flex;
+}
+
+.navbar-left .nav-link,
+.navbar-right .nav-link {
+  margin-left: 15px; /* Espaciado entre los enlaces, ajusta según lo necesites */
+  display: flex;
+  align-items: center;
+  color: white; /* Color blanco para el texto */
+  text-decoration: none; /* Elimina el subrayado */
+}
+
+.navbar-left .nav-link i,
+.navbar-right .nav-link i {
+  margin-right: 8px; /* Espaciado entre el icono y el texto */
+  color: white; /* Color blanco para los iconos */
+}
+
+.navbar-brand {
+  margin-right: 20px; /* Espaciado entre el logo y los enlaces, ajusta según lo necesites */
+  color: white; /* Color blanco para el texto del logo */
+}
+
+/* src/components/Navbar.css */
+
+.navbar-custom {
+    background-color: #343a40; /* Cambia esto al color de fondo que prefieras */
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+}
+
+.navbar-custom:hover {
+    background-color: #495057; /* Color de fondo cuando el mouse está sobre la navbar */
+}
+
+.navbar-brand {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #f8f9fa; /* Color de la marca cuando el mouse está sobre el texto */
+}
+
+.nav-link {
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #f8f9fa; /* Color del texto cuando el mouse está sobre el enlace */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo tenue cuando el mouse está sobre el enlace */
+    border-radius: 0.25rem; /* Bordes redondeados para un efecto más suave */
+}
+
+/* Opcional: Efecto de desvanecimiento para el enlace activo */
+.navbar-nav .nav-link.active {
+    color: #007bff; /* Color del enlace activo */
+    background-color: rgba(0, 123, 255, 0.1); /* Fondo tenue para el enlace activo */
+    border-radius: 0.25rem; /* Bordes redondeados */
+}
+
+.navbar-toggler {
+    border-color: #ffffff; /* Color del borde del botón de toggle */
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml,...'); /* Imagen del icono de toggle (puedes ajustar esto si lo deseas) */
+}
+
+
+/* src/components/Navbar.css */
+
+.navbar-custom {
+  background-color: #343a40; /* Color de fondo para la navbar */
+  padding: 0.5rem 7rem;
+}
+
+.navbar-brand {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #f8f9fa;
+}
+
+.navbar-nav {
+  margin-left: auto; /* Alinea los enlaces de navegación a la derecha */
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f8f9fa;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.25rem;
+}
+
+.navbar-toggler {
+  border-color: #ffffff; /* Color del borde del botón de toggle */
+}
+
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml,...'); /* Imagen del icono de toggle */
+}
+
+@media (max-width: 767.98px) {
+  .navbar-nav {
+      flex-direction: column; /* Cambia la dirección del flex para pantallas pequeñas */
+      text-align: center; /* Centra los elementos en pantallas pequeñas */
+  }
+
+  .navbar-nav .nav-link {
+      padding: 0.75rem 1.25rem; /* Ajusta el padding para pantallas pequeñas */
+  }
+}

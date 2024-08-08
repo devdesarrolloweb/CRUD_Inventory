@@ -1,0 +1,104 @@
+/* ProductList.css */
+
+/* Asegúrate de que estos estilos están en el archivo CSS correcto */
+
+.provider-list-container {
+    padding: 20px;
+    background-color: #f8f9fa; /* Color de fondo claro */
+}
+
+.card {
+    padding: 15px; /* Padding interno de la tarjeta */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para la tarjeta */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Tamaño de fuente para el título */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.card-text {
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.btn-light {
+    margin-right: 10px; /* Espaciado derecho para el botón de edición */
+}
+
+.bg-blue {
+    background-color: #226dbd; /* Color de fondo azul */
+}
+
+.text-white {
+    color: #fff; /* Color de texto blanco */
+}
+
+.bg-light-gray {
+    background-color: #f5f5f5; /* Color de fondo gris claro */
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem; /* Espaciado inferior */
+}
+
+.mt-4 {
+    margin-top: 1.5rem; /* Espaciado superior */
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.btn-secondary {
+    margin: 0 5px; /* Espaciado horizontal para los botones */
+}
+
+.btn-danger {
+    margin-left: 10px; /* Espaciado izquierdo para el botón de eliminar */
+}
+
+
+/* ProviderList.css */
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.provider-list-container {
+    padding: 20px;
+}
+
+.bg-blue {
+    background-color: #007bff; /* Cambia esto al color que prefieras */
+}
+
+.text-white {
+    color: #fff;
+}
+
+.bg-light-gray {
+    background-color: #f8f9fa; /* Cambia esto al color que prefieras */
+}
