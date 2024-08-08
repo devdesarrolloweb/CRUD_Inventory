@@ -1,5 +1,5 @@
-# CRUD_Inventory
-=======
+
+
 # CRUD Inventory API and Frontend
 
 ## Overview
