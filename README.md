@@ -104,7 +104,7 @@ This project is a simple CRUD (Create, Read, Update, Delete) application that in
 
 -  `DELETE /providers/:id` - Delete a specific provider by its ID.
 
-  
+-  **Postman Collection included: REST API basics- CRUD, Inventory.postman_collection.json**
 
 ## API Features
 
