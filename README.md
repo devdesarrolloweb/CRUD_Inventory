@@ -6,6 +6,8 @@
 
 ![Example GIF](public//Inventory.gif)
 
+-  **DEMO: https://crud-inventory.onrender.com**
+
 ## Overview
 
   
