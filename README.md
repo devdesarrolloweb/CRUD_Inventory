@@ -166,8 +166,6 @@ cd CRUD_Inventory
 
 # Navigate to the project directory
 
-cd my-product-app
-
 # Install dependencies
 
 npm install
