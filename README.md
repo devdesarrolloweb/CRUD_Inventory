@@ -7,6 +7,7 @@
 ![Example GIF](public//Inventory.gif)
 
 -  **DEMO: https://crud-inventory.onrender.com**
+takes a while to load the server, front end available
 
 ## Overview
 
